@@ -18,7 +18,7 @@ return new class extends Migration
             $table->decimal("price", 8, 2);
             $table->foreignId("category_id")->constrained("categories");
             $table->foreignId("user_id")->constrained("users");
-            $table->string("image")->constrained("default.jpg");
+            $table->string("image")->default("default.jpg");
             $table->timestamps();
         });
     }
